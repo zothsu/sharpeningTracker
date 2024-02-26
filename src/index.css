@@ -1,12 +1,12 @@
 /* CSS Custom Properties */
 :root {
   --white: #f5f2fb;
-  --tan-1: #FBF9F6;
-  --tan-2: #E7E2DD;
-  --tan-3: #E2D9D1;
-  --tan-4: #aeb1d3;
+  --tan-1: #f7f6fb;
+  --tan-2: #dedde7;
+  --tan-3: #d1d2e2;
+  --tan-4: #2f314a;
   --orange: #0f0e22;
-  --text-light: #ffffe9;
+  --text-light: #fffce9;
   --text-dark: #302b28;
 }
 
@@ -21,8 +21,7 @@ body {
   -moz-osx-font-smoothing: grayscale;
   background-color: var(--tan-4);
   color: var(--text-light);
-  padding: 2vmin;
-  height: 100vh;
+  padding: 1em;
 }
 
 code {
@@ -78,10 +77,15 @@ code {
 }
 
 .form-container {
-  padding: 3vmin;
+  padding: 1.5em;
   background-color: var(--tan-1);
-  border: .1vmin solid var(--tan-3);
-  border-radius: 1vmin;
+  border: .1em solid var(--tan-3);
+  border-radius: .25em;
+  max-width: fit-content;
+}
+.form-container-parent {
+  display: flex;
+  justify-content: center;
 }
 
 p.error-message {
@@ -92,7 +96,7 @@ p.error-message {
 form {
   display: grid;
   grid-template-columns: 1fr 3fr;
-  gap: 1.25vmin;
+  gap: 2.25vmin;
   color: var(--text-light);
 }
 
