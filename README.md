@@ -1,7 +1,4 @@
-# MERN-Stack Infrastructure
-
-Clone this repo to provide the starter code for a comprehensive MERN-Stack project including token-based authentication.
-
+cp 
 ## Available Scripts
 
 In the project directory, you can run:
