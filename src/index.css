@@ -4,10 +4,10 @@
   --tan-1: #f7f6fb;
   --tan-2: #dedde7;
   --tan-3: #d1d2e2;
-  --tan-4: #2f314a;
-  --orange: #0f0e22;
+  --tan-4: #00001f;
+  --highlight: #625cdab5;
   --text-light: #fffce9;
-  --text-dark: #302b28;
+  --text-dark: #130e21;
 }
 
 *, *:before, *:after {
@@ -89,42 +89,17 @@ code {
 }
 
 p.error-message {
-  color: var(--orange);
+  color: var(--highlight);
   text-align: center;
 }
 
-form {
-  display: grid;
-  grid-template-columns: 1fr 3fr;
-  gap: 2.25vmin;
-  color: var(--text-light);
-}
 
-label {
-  font-size: 2vmin;
-  display: flex;
-  align-items: center;
-}
-
-input {
-  padding: 1vmin;
-  font-size: 2vmin;
-  border: .1vmin solid var(--tan-3);
-  border-radius: .5vmin;
-  color: var(--text-dark);
-  background-image: none !important; /* prevent lastpass */
-  outline: none;
-}
-
-input:focus {
-  border-color: var(--orange);
-}
 
 button, a.button {
   margin: 1vmin;
   padding: 1vmin;
   color: var(--white);
-  background-color: var(--orange);
+  background-color: var(--highlight);
   font-size: 2vmin;
   font-weight: bold;
   text-decoration: none;

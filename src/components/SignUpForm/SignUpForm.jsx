@@ -37,7 +37,9 @@ export default class SignUpForm extends Component {
   render() {
     const disable = this.state.password !== this.state.confirm;
     return (
-      <div>
+      <>
+      <h2>CREATE AN ACCOUNT</h2>
+      <div className='form-container-parent'>
         <div className="form-container">
           <form autoComplete="off" onSubmit={this.handleSubmit}>
             <label>Name</label>
@@ -53,6 +55,7 @@ export default class SignUpForm extends Component {
         </div>
         <p className="error-message">&nbsp;{this.state.error}</p>
       </div>
+      </>
     );
   }
 }
