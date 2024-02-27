@@ -63,31 +63,6 @@ code {
   overflow-y: scroll;
 }
 
-.section-heading {
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  background-color: var(--tan-1);
-  color: var(--text-dark);
-  border: .1vmin solid var(--tan-3);
-  border-radius: 1vmin;
-  padding: .6vmin;
-  text-align: center;
-  font-size: 2vmin;
-}
-
-.form-container {
-  padding: 1.5em;
-  background-color: var(--tan-1);
-  border: .1em solid var(--tan-3);
-  border-radius: .25em;
-  max-width: fit-content;
-}
-.form-container-parent {
-  display: flex;
-  justify-content: center;
-}
-
 p.error-message {
   color: var(--highlight);
   text-align: center;
@@ -128,4 +103,13 @@ button:disabled, form:invalid button[type="submit"] {
 button[type="submit"] {
   grid-column: span 2;
   margin: 1vmin 0 0;
+}
+
+.container {
+  min-width: 5em;
+  max-width: 60em;
+  min-height: 25em;
+  background-color: var(--white);
+  margin: 0 auto;
+
 }

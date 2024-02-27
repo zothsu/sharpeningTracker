@@ -35,3 +35,15 @@ input {
 input:focus {
   border-color: var(--highlight);
 }
+
+.form-container {
+  padding: 1.5em;
+  background-color: var(--tan-1);
+  border: .1em solid var(--tan-3);
+  border-radius: .25em;
+  max-width: fit-content;
+}
+.form-container-parent {
+  display: flex;
+  justify-content: center;
+}
