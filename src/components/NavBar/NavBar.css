@@ -2,4 +2,5 @@ nav {
   display: flex;
   justify-content: right;
   gap: 1em;
+  text-transform: uppercase;
 }
