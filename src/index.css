@@ -21,7 +21,7 @@ body {
   -moz-osx-font-smoothing: grayscale;
   background-color: var(--tan-4);
   color: var(--text-light);
-  padding: 1em;
+
 }
 
 code {
@@ -111,5 +111,7 @@ button[type="submit"] {
   min-height: 25em;
   background-color: var(--white);
   margin: 0 auto;
-
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
