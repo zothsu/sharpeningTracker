@@ -11,6 +11,21 @@ const sharpeningSchema = new Schema({
   timestamps: true
 })
 
+const noteSchema = new Schema({
+  user: {
+    type: mongoose.Schema.Types.ObjectId,
+    required: true
+  },
+  noteType: {
+    type: String,
+    enum: ['Damage Report', 'Bevel Angle', 'Other']
+  },
+  noteDetails: {
+    type: String
+  }
+}, {
+  timestamps: true
+})
 
 const knifeSchema = new Schema({
   user: {
@@ -26,7 +41,7 @@ const knifeSchema = new Schema({
   imageURL: {
     type: String
   },
-  // note: [noteSchema],
+  note: [noteSchema],
   stone: [sharpeningSchema]
 }, {
   timestamps: true
