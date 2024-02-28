@@ -1,0 +1,6 @@
+.footer-social {
+  display: flex;
+  justify-content: center;
+  gap: 1em;
+  padding-bottom: 2em;
+}
