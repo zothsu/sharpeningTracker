@@ -20,6 +20,10 @@ npm 10.2.4
 
 git 2.43.0
 
+### Services Used
+
+[LineIcons](https://lineicons.com/)
+
 ## Getting Started
 
 Deployed app
