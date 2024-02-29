@@ -34,8 +34,9 @@ const knifeSchema = new Schema({
   },
   steel: {
     type: String,
-    enum: ['Stainless Steel', 'Carbon Steel', 'other']
+    enum: ['Stainless Steel', 'Carbon Steel', 'Powdered Metal','Other']
   },
+  otherSteel: String,
   purchaseDate: Date,
   brand: String,
   imageURL: {

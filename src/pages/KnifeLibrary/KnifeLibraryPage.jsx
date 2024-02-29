@@ -1,25 +1,36 @@
 import { useState } from "react";
-import KnifeDetailPage from "../KnifeDetailPage/KnifeDetailPage";
+import AddKnifeForm from '../../components/AddKnifeForm/AddKnifeForm'
 import { useEffect } from "react";
 import * as knivesApi from '../../utilities/knives-api'
 
-export default function App() {
-const [knives, setKnives] = useState([])
+export default function KnifeLibraryPage() {
+  const [addForm, setAddForm] = useState(false)
+  const [knives, setKnives] = useState([])
   // build a use effect to build once in the beginning, inside you will need an async funtion 
-  useEffect(() => {
-    async function getAllKnives() {
-      const allKnives = await knivesApi.getKnives()
-      setKnives(allKnives)
-    }
+  useEffect(() => {      
+      async function getAllKnives() {
+        const allKnives = await knivesApi.getKnives()
+        setKnives(allKnives)
+      }
     getAllKnives()
   }, [])
 
+  async function handleAddKnife(content) {
+    const knife = await knivesApi.addKnife(content)
+    setKnives([...knives, knife])
+  }
 
   return (
-    <main>
-      <h1>Knife Library Page</h1>
-      <div className="container"></div>
-      <KnifeDetailPage />
-    </main>
+    <>
+      <h1>Knife Library</h1>
+      {addForm 
+        ? <AddKnifeForm setAddForm={setAddForm} handleAddKnife={handleAddKnife}/>
+        :<div>
+          <button onClick={() => {setAddForm(true) }}>Add Knife</button>
+          {knives.map((k, idx)=> <h1>{k.steel}</h1>)}
+        </div>
+      }
+    </>
+
   )
 }
