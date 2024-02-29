@@ -2,6 +2,7 @@ import { useState } from "react";
 import AddKnifeForm from '../../components/AddKnifeForm/AddKnifeForm'
 import { useEffect } from "react";
 import * as knivesApi from '../../utilities/knives-api'
+import KnifeDetails from "../../components/KnifeDetail/KnifeDetails";
 
 export default function KnifeLibraryPage() {
   const [addForm, setAddForm] = useState(false)
@@ -27,7 +28,7 @@ export default function KnifeLibraryPage() {
         ? <AddKnifeForm setAddForm={setAddForm} handleAddKnife={handleAddKnife}/>
         :<div>
           <button onClick={() => {setAddForm(true) }}>Add Knife</button>
-          {knives.map((k, idx)=> <h1>{k.steel}</h1>)}
+          <KnifeDetails/>
         </div>
       }
     </>

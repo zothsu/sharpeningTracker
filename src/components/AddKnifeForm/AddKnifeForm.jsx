@@ -24,7 +24,9 @@ export default function AddKnifeForm({handleAddKnife, setAddForm}) {
   return(
     <div>
       <form onSubmit={handleSubmit}>
-        <label htmlFor="">Steel</label>
+        <label ></label>
+        <input name="name" type="text" onChange={handleChange} value={content.name || ''}/>
+        <label >Steel</label>
         <select name="steel" onChange={handleChange}>
           <option value="Stainless Steel">Stainless Steel</option>
           <option value="Carbon Steel">Carbon Steel</option>
@@ -32,11 +34,11 @@ export default function AddKnifeForm({handleAddKnife, setAddForm}) {
           <option value="Other">Other</option>
         </select>
         {content.steel === "Other" && <input name="otherSteel" type="text" onChange={handleChange} value={content.otherSteel || ''}/>}
-        <label htmlFor="">Brand</label>
+        <label >Brand</label>
         <input name="brand" type="text" onChange={handleChange} value={content.brand || ''}/>
-        <label htmlFor="">Purchase Date</label>
+        <label >Purchase Date</label>
         <input name="purchaseDate" type="date" onChange={handleChange} value={content.purchaseDate || ''}/>
-        <label htmlFor="">Image URL</label>
+        <label >Image URL</label>
         <input name="imageURL" type="text" onChange={handleChange} value={content.imageURL || ''}/>
         <button type="submit">Submit</button>
       </form>

@@ -1,3 +1,6 @@
+.herocontainertop {
+  height: 80vh;
+}
 .hero {
   font-family: "Megrim", system-ui;
   font-size: 4REM;

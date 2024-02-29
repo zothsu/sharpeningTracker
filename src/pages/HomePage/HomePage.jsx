@@ -4,9 +4,8 @@ import Footer from '../../components/Footer/Footer'
 export default function HomePage() {
   return (
     <>
-    <div className='gridhero'>
-      <p className='hero top'>Because sharp </p>
-      <p className='hero mid'>knives</p>
+    <div className='herocontainertop'>
+      <p className='hero top'>Sharp knives</p>
       <p className='hero lower'>save lives</p>
     </div>
       <div className='herocontainer'>
