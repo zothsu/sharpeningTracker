@@ -21,7 +21,7 @@ export default function App() {
               {/* Route components in here */}              
               <Route path="/" element={<HomePage />} />
               <Route path="/library" element={<KnifeLibraryPage />} />
-              <Route path="/library/id" element={<KnifeDetailPage />} />
+              <Route path="/library/:idx" element={<KnifeDetailPage />} />
               <Route path='/resources' element={<ResourcesPage/>} />
             </Routes>
           </>

@@ -2,8 +2,23 @@ const Knife = require('../../models/knife');
 
 module.exports = {
   index,
-  create
+  create, 
+  show,
+  createSharpening,
 };
+
+async function createSharpening(req, res) {
+  const knife = await Knife.findById(req.params.id);
+  req.body.user = req.user._id;
+  knife.stone.push(req.body);
+  await knife.save();
+  res.json(knife)
+}
+
+async function show(req, res) {
+  const knife = await Knife.findById(req.params.id);
+  res.json(knife);
+}
 
 async function index(req, res) {
   const knives = await Knife.find({user: req.user._id})
@@ -20,3 +35,4 @@ async function create(req, res) {
     console.log(e.message)
   }
 }
+

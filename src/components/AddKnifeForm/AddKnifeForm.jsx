@@ -17,7 +17,7 @@ export default function AddKnifeForm({handleAddKnife, setAddForm}) {
 
   function handleChange(evt) {
     const data = {...content, [evt.target.name]:evt.target.value}
-  setContent(data)
+    setContent(data)
   }
 
 

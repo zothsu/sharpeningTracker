@@ -7,7 +7,9 @@ import KnifeDetails from "../../components/KnifeDetail/KnifeDetails";
 export default function KnifeLibraryPage() {
   const [addForm, setAddForm] = useState(false)
   const [knives, setKnives] = useState([])
-  // build a use effect to build once in the beginning, inside you will need an async funtion 
+
+
+
   useEffect(() => {      
       async function getAllKnives() {
         const allKnives = await knivesApi.getKnives()
@@ -28,7 +30,7 @@ export default function KnifeLibraryPage() {
         ? <AddKnifeForm setAddForm={setAddForm} handleAddKnife={handleAddKnife}/>
         :<div>
           <button onClick={() => {setAddForm(true) }}>Add Knife</button>
-          <KnifeDetails/>
+          <KnifeDetails knives={knives}/>
         </div>
       }
     </>
