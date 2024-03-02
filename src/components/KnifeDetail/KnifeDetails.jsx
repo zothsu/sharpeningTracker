@@ -23,7 +23,7 @@ function findLastSharpened(k) {
             <p className="name">Name/Series Name<br/>{k.name}</p>
             <p className="steel">Steel Type<br/>{k.steel === "Other" ? k.otherSteel : k.steel}</p>
             <p className="date">Purchase Date <br/>{formatDate(k.purchaseDate)}</p>
-            <p className="date">Last Sharpened <br/>{formatDate(findLastSharpened(k))}</p>
+            {/* <p className="date">Last Sharpened <br/>{formatDate(findLastSharpened(k))}</p> */}
           </div>
         </Link>
       ))}
