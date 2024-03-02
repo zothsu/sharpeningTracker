@@ -2,6 +2,7 @@ import { useState } from "react";
 
 export default function AddKnifeForm({handleAddKnife, setAddForm}) {
   const [content, setContent] = useState({
+    name: '',
     steel: 'Stainless Steel',
     otherSteel: '',
     purchaseDate: '',
@@ -24,7 +25,7 @@ export default function AddKnifeForm({handleAddKnife, setAddForm}) {
   return(
     <div>
       <form onSubmit={handleSubmit}>
-        <label ></label>
+        <label >Name/Series Name</label>
         <input name="name" type="text" onChange={handleChange} value={content.name || ''}/>
         <label >Steel</label>
         <select name="steel" onChange={handleChange}>
