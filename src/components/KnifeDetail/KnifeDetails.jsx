@@ -8,7 +8,12 @@ export default function KnifeDetails({knives}) {
     return new Date(date).toLocaleDateString('en-US', options);
   };
 
-
+function findLastSharpened(k) {
+  console.log(k)
+  const stone = k.stones.sort((a,b) => a.createdAt-b.createdAt)
+  console.log(stone)
+  return stone[0].createdAt
+}
 
   return (
     <>
@@ -18,7 +23,7 @@ export default function KnifeDetails({knives}) {
             <p className="name">Name/Series Name<br/>{k.name}</p>
             <p className="steel">Steel Type<br/>{k.steel === "Other" ? k.otherSteel : k.steel}</p>
             <p className="date">Purchase Date <br/>{formatDate(k.purchaseDate)}</p>
-            <p className="date">Last Sharpened <br/>{formatDate(k.stone)}</p>
+            <p className="date">Last Sharpened <br/>{formatDate(findLastSharpened(k))}</p>
           </div>
         </Link>
       ))}
