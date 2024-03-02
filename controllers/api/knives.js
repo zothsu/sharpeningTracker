@@ -5,7 +5,16 @@ module.exports = {
   create, 
   show,
   createSharpening,
+  createNote
 };
+
+async function createNote(req, res) {
+  const knife = await Knife.findById(req.params.id);
+  req.body.user = req.user._id;
+  knife.notes.push(req.body);
+  await knife.save();
+  res.json(knife)
+}
 
 async function createSharpening(req, res) {
   const knife = await Knife.findById(req.params.id);

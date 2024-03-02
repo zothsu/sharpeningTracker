@@ -49,8 +49,8 @@ const knifeSchema = new Schema({
   imageURL: {
     type: String
   },
-  note: [noteSchema],
-  stone: [sharpeningSchema]
+  notes: [noteSchema],
+  stones: [sharpeningSchema]
 }, {
   timestamps: true
 })

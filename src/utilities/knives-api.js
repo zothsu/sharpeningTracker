@@ -38,9 +38,9 @@ export function addSharpening(idx, content) {
 
 // // NOTE 
 
-// export function addNote(idx, content) {
-//   return sendRequest(`${BASE_URL}/${idx}/note`, 'POST', content)
-// }
+export function addNote(idx, content) {
+  return sendRequest(`${BASE_URL}/${idx}/note`, 'POST', content)
+}
 
 // export function deleteNote(idx, noteId) {
 //   return sendRequest(`${BASE_URL}/${idx}/note/${noteId}`, 'DELETE')
