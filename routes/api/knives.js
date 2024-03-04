@@ -9,8 +9,9 @@ router.post('/', knivesCtrl.create)
 
 router.get('/:id', knivesCtrl.show)
 
+router.post('/:id/note', knivesCtrl.createNote)
+
 router.post('/:id/sharpening', knivesCtrl.createSharpening )
 
-router.post('/:id/note', knivesCtrl.createNote)
 
 module.exports = router;

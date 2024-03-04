@@ -16,6 +16,7 @@ export default function KnifeDetailPage() {
     // setSharpenings([...sharpenings, sharpening])
     setKnife(sharpening)
   }
+
   async function handleAddNote(content) {  
     const updatedKnife = await knivesApi.addNote(idx, content)
     setKnife(updatedKnife)
@@ -28,6 +29,11 @@ export default function KnifeDetailPage() {
     }
     getKnife();
   }, [idx]);
+
+  const formatDate = (date) => {
+    const options = { year: 'numeric', month: '2-digit', day: '2-digit' };
+    return new Date(date).toLocaleDateString('en-US', options);
+  };
 
   return (
     <>
@@ -52,18 +58,28 @@ export default function KnifeDetailPage() {
               ))}
             </div>
           </aside>
+
           <div className="knifeSharpeningHist">
             <h2>Sharpening History</h2>
             <button onClick={() => setAddForm(true)}>Add Sharpening</button>
             {addForm && <AddSharpeningForm handleAddSharpening={handleAddSharpening} setAddForm={setAddForm} />}
-            { knife.stone.map((s, idx)=> (
-              <div key={idx}>
-                <p className="brand">Brand {s.brand}</p>
-                <p className="medium">Medium {s.medium === "Other" ? s.otherMedium : s.medium}</p>
-                <p className="grit">Grit{s.grit}</p>
-                <p className="date">Sharpen Date{s.createdAt}</p>
-              </div>
-            ))}
+            <table>
+                <tr>
+                    <th>Stone Brand</th>
+                    <th>Grit</th>
+                    <th>Date</th>
+                </tr>
+                {knife.stones.map((val, key) => {
+                    return (
+                        <tr key={key}>
+                            <td>{val.brand}</td>
+                            <td>{val.grit}</td>
+                            <td>{formatDate(val.createdAt)}</td>
+                        </tr>
+                    )
+                })}
+            </table>
+
           </div>
         </div>
       }

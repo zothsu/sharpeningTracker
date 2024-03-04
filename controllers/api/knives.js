@@ -19,7 +19,7 @@ async function createNote(req, res) {
 async function createSharpening(req, res) {
   const knife = await Knife.findById(req.params.id);
   req.body.user = req.user._id;
-  knife.stone.push(req.body);
+  knife.stones.push(req.body);
   await knife.save();
   res.json(knife)
 }
