@@ -45,7 +45,7 @@ export default function KnifeDetailPage() {
               <h2>Knife Details</h2>
               <p className="name">Name/Series Name: {knife.name}</p>
               <p className="steel">Steel Type: {knife.steel === "Other" ? knife.otherSteel : knife.steel}</p>
-              <p className="purchase">Purchase Date: {knife.purchasedate}</p>
+              <p className="purchase">Purchase Date: {formatDate(knife.purchaseDate)}</p>
             </div>
             <div className="knifeNotes">
               <h2>Notes</h2>
@@ -59,9 +59,7 @@ export default function KnifeDetailPage() {
             </div>
           </aside>
 
-          <div className="knifeSharpeningHist">
-            <h2>Sharpening History</h2>
-            <button onClick={() => setAddForm(true)}>Add Sharpening</button>
+            <h2>Sharpening History &nbsp;<button onClick={() => setAddForm(true)}>Add Sharpening</button> </h2>
             {addForm && <AddSharpeningForm handleAddSharpening={handleAddSharpening} setAddForm={setAddForm} />}
             <table>
                 <tr>
