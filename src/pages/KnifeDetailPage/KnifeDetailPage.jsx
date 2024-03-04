@@ -58,26 +58,27 @@ export default function KnifeDetailPage() {
               ))}
             </div>
           </aside>
-
-            <h2>Sharpening History &nbsp;<button onClick={() => setAddForm(true)}>Add Sharpening</button> </h2>
-            {addForm && <AddSharpeningForm handleAddSharpening={handleAddSharpening} setAddForm={setAddForm} />}
+          <div className="sharpeingDetails">
+            <h2>Sharpening History &nbsp;
+              <button onClick={() => setAddForm(true)}> Add Sharpening</button>
+              {addForm && <AddSharpeningForm handleAddSharpening={handleAddSharpening} setAddForm={setAddForm} />}
+            </h2>
             <table>
-                <tr>
-                    <th>Stone Brand</th>
-                    <th>Grit</th>
-                    <th>Date</th>
-                </tr>
-                {knife.stones.map((val, key) => {
-                    return (
-                        <tr key={key}>
-                            <td>{val.brand}</td>
-                            <td>{val.grit}</td>
-                            <td>{formatDate(val.createdAt)}</td>
-                        </tr>
-                    )
-                })}
+              <tr>
+                <th>Stone Brand</th>
+                <th>Grit</th>
+                <th>Date</th>
+              </tr>
+              {knife.stones.map((val, key) => {
+                return (
+                  <tr key={key}>
+                    <td>{val.brand}</td>
+                    <td>{val.grit}</td>
+                    <td>{formatDate(val.createdAt)}</td>
+                  </tr>
+                )
+              })}
             </table>
-
           </div>
         </div>
       }
