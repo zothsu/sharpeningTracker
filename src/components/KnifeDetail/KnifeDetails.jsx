@@ -19,13 +19,11 @@ export default function KnifeDetails({knives}) {
       {knives.map((k, idx)=> (
         <Link to={`/library/${k._id}`}>
           <div className="knifedetails" key={idx}>
-            <p className="name">Name/Series Name<br/>{k.name}</p>
-            <p className="steel">Steel Type<br/>{k.steel === "Other" ? k.otherSteel : k.steel}</p>
+            <p className="name">Name/Series Name <br/>{k.name}</p>
+            <p className="steel">Steel Type <br/>{k.steel === "Other" ? k.otherSteel : k.steel}</p>
             <p className="date">Purchase Date <br/>{formatDate(k.purchaseDate)}</p>
-            {/* <p className="date">Last Sharpened <br/>{formatDate(k.stones[0].createdAt)}</p> */}
-            {/* <p className="date">Last Sharpened <br/>{k.stones[0].createdAt}</p> */}
-            {/* <p className="date">Last Sharpened <br/>{formatDate(findLastSharpened(k))}</p> */}
-            {/* <p className="date">Last Sharpened <br/>{findLastSharpened()}</p> */}
+
+            <p className="date">Last Sharpened <br/>{k.stones.length > 0 ? formatDate(findLastSharpened(k)) : "N/A"}</p>
           </div>
         </Link>
       ))}
