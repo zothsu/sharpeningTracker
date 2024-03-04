@@ -1,17 +1,15 @@
 .knifedetails {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-template-rows: 1fr 1fr;
-  grid-gap: 1em;
-  margin: 2em;
-  padding: 2em;
-  border-radius: 10px;
-  background-color: #fff;
-  box-shadow: 0 0 10px 0 #000;
-  color: #000;
+  padding: 1em;
+  border-radius: .5em;
 }
 .knifedetails:hover {
-  box-shadow: 0 0 .5em .5em #bc89f9;
+  box-shadow: .1em .1em .4em #bc89f9;
 }
 
-
+table {
+  width: 90%;
+  border-collapse: collapse;
+  margin-left: auto;
+  margin-right: auto;
+  
+}

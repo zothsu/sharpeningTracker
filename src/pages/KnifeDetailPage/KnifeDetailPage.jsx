@@ -44,6 +44,7 @@ export default function KnifeDetailPage() {
             <div className="knifeDetails">
               <h2>Knife Details</h2>
               <p className="name">Name/Series Name: {knife.name}</p>
+              <p className="length">Length: {knife.length}</p>
               <p className="steel">Steel Type: {knife.steel === "Other" ? knife.otherSteel : knife.steel}</p>
               <p className="purchase">Purchase Date: {formatDate(knife.purchaseDate)}</p>
             </div>

@@ -5,8 +5,19 @@ module.exports = {
   create, 
   show,
   createSharpening,
-  createNote
+  createNote,
+  delete: deleteKnife,
+  updateKnife
 };
+
+async function updateKnife(req, res) {
+  const updateKnife = await Knife.findOneAndUpdate(
+    {_id: req.params.id},
+    req.body,
+    {new: true}
+  );
+  res.json(updateKnife)
+}
 
 async function createNote(req, res) {
   const knife = await Knife.findById(req.params.id);
@@ -43,5 +54,11 @@ async function create(req, res) {
   }catch(e) {
     console.log(e.message)
   }
+}
+
+async function deleteKnife(req, res) {
+  console.log(req.params.id)
+  const knife = await Knife.findByIdAndRemove(req.params.id);
+  res.json(knife);
 }
 

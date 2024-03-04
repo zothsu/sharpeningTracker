@@ -38,7 +38,10 @@ const knifeSchema = new Schema({
     type: mongoose.Schema.Types.ObjectId,
     required: true
   },
-  name: String,
+  name: {
+    type: String,
+    required: true},
+  length: String, 
   steel: {
     type: String,
     enum: ['Stainless Steel', 'Carbon Steel', 'Powdered Metal','Other']

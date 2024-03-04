@@ -1,8 +1,9 @@
 import { useState } from "react";
 
-export default function AddKnifeForm({handleAddKnife, setAddForm}) {
-  const [content, setContent] = useState({
+export default function AddKnifeForm({handleAddKnife, handleUpdateKnife, setAddForm, knife, setEdit}) {
+  const [content, setContent] = useState(knife ? knife : {
     name: '',
+    length: '',
     steel: 'Stainless Steel',
     otherSteel: '',
     purchaseDate: '',
@@ -12,7 +13,8 @@ export default function AddKnifeForm({handleAddKnife, setAddForm}) {
 
   function handleSubmit(e) {
     e.preventDefault();
-    handleAddKnife(content)
+    knife ? handleUpdateKnife(content, knife._id) : handleAddKnife(content)
+    knife && setEdit(false) 
     setAddForm(false)
   }
 
@@ -27,6 +29,8 @@ export default function AddKnifeForm({handleAddKnife, setAddForm}) {
       <form onSubmit={handleSubmit}>
         <label >Name/Series Name</label>
         <input name="name" type="text" onChange={handleChange} value={content.name || ''}/>
+        <label htmlFor="">Length</label>
+        <input name="length" type="text" onChange={handleChange} value={content.length || ''}/>
         <label >Steel</label>
         <select name="steel" onChange={handleChange}>
           <option value="Stainless Steel">Stainless Steel</option>
@@ -43,7 +47,7 @@ export default function AddKnifeForm({handleAddKnife, setAddForm}) {
         <input name="imageURL" type="text" onChange={handleChange} value={content.imageURL || ''}/>
         <button type="submit">Submit</button>
       </form>
-      <button onClick={() => setAddForm(false) }>Cancel</button>
+      <button onClick={() => knife ? setEdit(false) : setAddForm(false) }>Cancel</button>
     </div>
   )
 }

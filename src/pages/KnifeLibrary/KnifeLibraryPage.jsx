@@ -9,7 +9,6 @@ export default function KnifeLibraryPage() {
   const [knives, setKnives] = useState([])
 
 
-
   useEffect(() => {      
       async function getAllKnives() {
         const allKnives = await knivesApi.getKnives()
@@ -23,14 +22,26 @@ export default function KnifeLibraryPage() {
     setKnives([...knives, knife])
   }
 
+  async function handleDeleteKnife(id) {
+    await knivesApi.deleteKnife(id);
+    const updatedKnives = knives.filter(knife => knife._id !== id);
+    setKnives(updatedKnives);
+  }
+
+  async function handleUpdateKnife(content, id) {
+    const knife = await knivesApi.updateKnife(content, id)
+    const updatedKnives = knives.map(k => k._id === knife._id ? knife : k )
+    setKnives(updatedKnives)
+  }
+
   return (
     <>
       <h1>Knife Library</h1>
       {addForm 
-        ? <AddKnifeForm setAddForm={setAddForm} handleAddKnife={handleAddKnife}/>
+        ? <AddKnifeForm knife={false} setAddForm={setAddForm} handleAddKnife={handleAddKnife}/>
         :<div>
           <button onClick={() => {setAddForm(true) }}>Add Knife</button>
-          <KnifeDetails knives={knives}/>
+          <KnifeDetails handleDeleteKnife={handleDeleteKnife} handleUpdateKnife={handleUpdateKnife} knives={knives}/>
         </div>
       }
     </>

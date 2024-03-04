@@ -13,13 +13,13 @@ export function getKnife(id) {
   return sendRequest(`${BASE_URL}/${id}` )
 }
 
-// export function deleteKnife(idx) {
-//   return sendRequest(`${BASE_URL}/${idx}`, 'DELETE')
-// } 
+export function deleteKnife(idx) {
+  return sendRequest(`${BASE_URL}/${idx}`, 'DELETE')
+} 
 
-// export function updateKnife(idx, content) {
-//   return sendRequest(`${BASE_URL}/${idx}`, 'PUT', content)
-// }
+export function updateKnife(content, id) {
+  return sendRequest(`${BASE_URL}/${id}`, 'PUT', content)
+}
 
 // SHARPENING
 

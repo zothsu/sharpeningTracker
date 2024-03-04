@@ -13,5 +13,11 @@ router.post('/:id/note', knivesCtrl.createNote)
 
 router.post('/:id/sharpening', knivesCtrl.createSharpening )
 
+router.delete('/:id', knivesCtrl.delete)
+
+router.put('/:id', knivesCtrl.updateKnife)
+
+
+
 
 module.exports = router;

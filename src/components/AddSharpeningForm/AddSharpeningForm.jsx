@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-export default function AddKnifeForm({handleAddSharpening, setAddForm}) {
+export default function AddSharpeningForm({handleAddSharpening, setAddForm}) {
   const [content, setContent] = useState({
     brand: '',
     medium: 'Diamond',
@@ -36,6 +36,8 @@ export default function AddKnifeForm({handleAddSharpening, setAddForm}) {
         {content.medium === "Other" && <input name="otherMedium" type="text" onChange={handleChange} value={content.otherMedium || ''}/>}
         <label >Grit</label>
         <input name="grit" type="text" onChange={handleChange} value={content.grit || ''}/>
+        <label >Date</label>
+        <input name="date" type="date" onChange={handleChange} value={content.date || ''}/>
         <button type="submit">Submit</button>
       </form>
       <button onClick={() => setAddForm(false) }>Cancel</button>
