@@ -3,7 +3,13 @@
   border-radius: .5em;
 }
 .knifedetails:hover {
-  box-shadow: .1em .1em .4em #bc89f9;
+  box-shadow: .1em .1em .4em hsla(270, 100%, 80%, 0.4);
+}
+
+a {
+  color: #fff;
+  cursor: pointer;
+  font-weight: 900;
 }
 
 table {

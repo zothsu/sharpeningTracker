@@ -1,4 +1,5 @@
 import { useState } from "react";
+import './AddNoteForm.css'
 
 export default function AddKnifeForm({handleAddNote, setAddNoteForm}) {
   const [content, setContent] = useState({
@@ -18,7 +19,7 @@ export default function AddKnifeForm({handleAddNote, setAddNoteForm}) {
   }
 
   return(
-    <div>
+    <div className="form-container">
       <form onSubmit={handleSubmit}>
         <label>Note Type</label>
         <select name="noteType" onChange={handleChange}>

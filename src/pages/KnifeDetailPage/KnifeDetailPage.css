@@ -1,6 +1,43 @@
+h1 {
+  font-size: 3rem;
+}
+.btnInTitle {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+}
 .detailcontainer {
   display: flex;
   flex-direction: row;
   width: 100vw;
   justify-content: space-around;
+}
+
+.knifeDetails, .knifeNotes {
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+}
+
+.knifeDetails h2 {
+  margin: 0;
+  padding: 0
+}
+
+.knifeDetail {
+  margin-right: 0;
+  margin: 0;
+}
+
+.name, .length, .steel, .purchaseDate, .brand, .purchase, .notes {
+  margin-bottom: 0;
+  display: flex;
+  justify-content: space-between;
+}
+
+aside {
+  padding: 1em;
 }

@@ -42,24 +42,25 @@ export default function KnifeDetailPage() {
           <aside className="leftSide">
             <div className="knifeDetails">
               <h2>Knife Details</h2>
-              <p className="name">Name/Series Name: {knife.name}</p>
-              <p className="length">Length: {knife.length}</p>
-              <p className="steel">Steel Type: {knife.steel === "Other" ? knife.otherSteel : knife.steel}</p>
-              <p className="purchase">Purchase Date: {formatDate(knife.purchaseDate)}</p>
+              <p className="name">Name/Series Name: <span>{knife.name}</span> 
+                </p>
+              <p className="steel">Steel Type: <span>{knife.steel === "Other" ? knife.otherSteel : knife.steel}</span></p>
+              <p className="length">Length: <span>{knife.length}</span></p>
+              <p className="purchase">Purchase Date: <span>{formatDate(knife.purchaseDate)}</span></p>
             </div>
+            <hr/>
             <div className="knifeNotes">
-              <h2>Notes</h2>
-              <button onClick={() => setAddNoteForm(true)}>Add Note</button>
+              <h2 className="btnInTitle">Notes <button onClick={() => setAddNoteForm(true)}>Add Note</button></h2>
               {addNoteForm && <AddNoteForm handleAddNote={handleAddNote} setAddNoteForm={setAddNoteForm} />}
               { knife.notes.map((n, idx)=> (
                 <div key={idx}>
-                  <p>{n.noteType}: {n.noteDetails}</p>
+                  <p className="notes">{n.noteType}: <span> {n.noteDetails}</span></p>
                 </div>
               ))}
             </div>
           </aside>
           <div className="sharpeingDetails">
-            <h2>Sharpening History &nbsp;
+            <h2 className="btnInTitle">Sharpening History &nbsp;
               <button onClick={() => setAddForm(true)}> Add Sharpening</button>
               {addForm && <AddSharpeningForm handleAddSharpening={handleAddSharpening} setAddForm={setAddForm} />}
             </h2>
