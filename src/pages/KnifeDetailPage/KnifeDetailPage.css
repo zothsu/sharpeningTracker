@@ -1,6 +1,9 @@
 h1 {
   font-size: 3rem;
 }
+h2 {
+  padding: 1em;
+}
 .btnInTitle {
   margin: 0;
   padding: 0;
@@ -44,5 +47,22 @@ aside {
   flex-direction: column;
   justify-content: space-evenly;
   row-gap: 4em;
+}
 
+
+@media (max-width: 700px) {
+
+  .detailcontainer {
+    flex-direction: column;
+  }
+
+  .knifeDetails, .knifeNotes {
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .sharpeingDetails {
+    padding: 1em;
+  }
 }
