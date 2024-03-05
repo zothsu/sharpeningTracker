@@ -65,17 +65,17 @@ export default function KnifeDetailPage() {
               {addForm && <AddSharpeningForm handleAddSharpening={handleAddSharpening} setAddForm={setAddForm} />}
             <table>
               <tr>
-                <th>Stone Brand</th>
+                <th className="hide-on-small">Stone Brand</th>
                 <th>Grit</th>
-                <th>Medium</th>
+                <th className="hide-on-small">Medium</th>
                 <th>Date</th>
               </tr>
               {knife.stones.map((val, key) => {
                 return (
                   <tr key={key}>
-                    <td>{val.brand}</td>
+                    <td className="hide-on-small">{val.brand}</td>
                     <td>{val.grit}</td>
-                    <td>{val.medium === "Other" ? val.otherMedium : val.medium}</td>
+                    <td className="hide-on-small">{val.medium === "Other" ? val.otherMedium : val.medium}</td>
                     <td>{formatDate(val.date)}</td>
                   </tr>
                 )

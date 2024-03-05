@@ -8,7 +8,7 @@ export default function AddKnifeForm({handleAddKnife, handleUpdateKnife, setAddF
     purchaseDate: '',
     brand: '',
     imageURL: '',
-    steel: '',
+    steel: 'Stainless Steel',
     otherSteel: '',
   });
 

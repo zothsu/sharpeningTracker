@@ -1,13 +1,13 @@
 .knifedetails {
   padding: 1em;
-  border-radius: .5em;
+  border-radius: 10em;
 }
 .knifedetails:hover {
-  box-shadow: .1em .1em .4em hsla(270, 100%, 80%, 0.4);
+  box-shadow: 0em .11em .1em hsla(270, 100%, 80%, 0.1);
 }
 
 a {
-  color: #fff;
+  color: #cfb7f9;
   cursor: pointer;
   font-weight: 900;
 }
