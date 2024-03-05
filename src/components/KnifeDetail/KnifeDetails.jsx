@@ -14,8 +14,8 @@ export default function KnifeDetails({knives, handleDeleteKnife, handleUpdateKni
   };
 
   function findLastSharpened(k) {
-    const stone = k.stones.sort((a,b) => a.createdAt-b.createdAt)
-    return stone[0].createdAt
+    const stone = k.stones.sort((a,b) => a.date-b.date)
+    return stone[0].date
   }
 
   function handleEdit(id) {
@@ -48,7 +48,7 @@ export default function KnifeDetails({knives, handleDeleteKnife, handleUpdateKni
                   </Link>
                 </td>
                 <td>{k.steel === "Other" ? k.otherSteel : k.steel}</td>
-                <td>{k.purchaseDate ? formatDate(k.purchaseDate) : "Unknown"}</td>
+                <td>{k.length ? k.length : "Unknown"}</td>
                 <td>{k.stones.length > 0 ? formatDate(findLastSharpened(k)) : "N/A"}</td>
                 <td>
                   <button onClick={() => handleDeleteKnife(k._id)}>Delete</button>

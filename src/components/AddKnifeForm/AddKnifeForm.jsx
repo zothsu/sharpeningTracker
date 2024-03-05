@@ -34,8 +34,11 @@ export default function AddKnifeForm({handleAddKnife, handleUpdateKnife, setAddF
         <input name="length" type="text" onChange={handleChange} value={content.length || ''}/>
         <label >Brand</label>
         <input name="brand" type="text" onChange={handleChange} value={content.brand || ''}/>
-        <label >Purchase Date</label>
-        <input name="purchaseDate" type="date" onChange={handleChange} value={content.purchaseDate || ''}/>
+        { !knife && 
+          <label >Purchase Date</label> }
+        { !knife &&
+          <input name="purchaseDate" type="date" onChange={handleChange} value={content.purchaseDate || ''}/>
+        }
         <label >Steel</label>
         <select value={content.steel} name="steel" onChange={handleChange}>
           <option value="Stainless Steel">Stainless Steel</option>

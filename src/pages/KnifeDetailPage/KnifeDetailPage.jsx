@@ -61,8 +61,8 @@ export default function KnifeDetailPage() {
           <div className="sharpeingDetails">
             <h2 className="btnInTitle">Sharpening History &nbsp;
               <button onClick={() => setAddForm(true)}> Add Sharpening</button>
-              {addForm && <AddSharpeningForm handleAddSharpening={handleAddSharpening} setAddForm={setAddForm} />}
             </h2>
+              {addForm && <AddSharpeningForm handleAddSharpening={handleAddSharpening} setAddForm={setAddForm} />}
             <table>
               <tr>
                 <th>Stone Brand</th>
@@ -76,7 +76,7 @@ export default function KnifeDetailPage() {
                     <td>{val.brand}</td>
                     <td>{val.grit}</td>
                     <td>{val.medium === "Other" ? val.otherMedium : val.medium}</td>
-                    <td>{formatDate(val.createdAt)}</td>
+                    <td>{formatDate(val.date)}</td>
                   </tr>
                 )
               })}

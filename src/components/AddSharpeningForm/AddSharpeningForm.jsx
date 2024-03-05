@@ -7,12 +7,14 @@ export default function AddSharpeningForm({handleAddSharpening, setAddForm}) {
     medium: 'Diamond',
     otherMedium: '',
     grit: '',
+    date: '',
   });
 
   function handleChange(evt) {
     const data = {...content, [evt.target.name]:evt.target.value}
     setContent(data)
   }
+
 
   function handleSubmit(e) {
     e.preventDefault();
@@ -24,7 +26,7 @@ export default function AddSharpeningForm({handleAddSharpening, setAddForm}) {
     <div className="form-container">
       <form onSubmit={handleSubmit}>
         <label >Date</label>
-        <input name="date" type="date" onChange={handleChange} value={content.date || ''}/>
+        <input name="date" type="datetime-local" onChange={handleChange} value={content.date || ''}/>
         <label >Brand</label>
         <input name="brand" type="text" onChange={handleChange} value={content.brand || ''}/>
         <label >Grit</label>

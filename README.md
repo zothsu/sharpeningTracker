@@ -33,3 +33,7 @@ trello board
 ## Next Steps
 
 Icebox features
+
+### Bugs
+
+- Add date is only working with datetime-local type. Need to find timeless fix

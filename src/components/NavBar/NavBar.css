@@ -11,3 +11,8 @@ nav a {
   color: #fff;
   font-weight: bold;
 }
+
+nav :first-child {
+  color: #e40000;
+  margin-right: auto;
+}

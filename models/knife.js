@@ -13,6 +13,7 @@ const sharpeningSchema = new Schema({
   },
   otherMedium: String, 
   grit: String,
+  date: Date,
 },{
   timestamps: true
 })
