@@ -13,7 +13,6 @@ export default function KnifeDetailPage() {
 
   async function handleAddSharpening(content) {
     const sharpening = await knivesApi.addSharpening(idx, content)
-    // setSharpenings([...sharpenings, sharpening])
     setKnife(sharpening)
   }
 

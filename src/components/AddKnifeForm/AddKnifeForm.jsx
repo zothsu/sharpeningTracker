@@ -32,7 +32,7 @@ export default function AddKnifeForm({handleAddKnife, handleUpdateKnife, setAddF
         <label htmlFor="">Length</label>
         <input name="length" type="text" onChange={handleChange} value={content.length || ''}/>
         <label >Steel</label>
-        <select name="steel" onChange={handleChange}>
+        <select value={content} name="steel" onChange={handleChange}>
           <option value="Stainless Steel">Stainless Steel</option>
           <option value="Carbon Steel">Carbon Steel</option>
           <option value="Powdered Metal">Powdered Metal</option>

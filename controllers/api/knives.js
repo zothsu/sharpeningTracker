@@ -57,8 +57,15 @@ async function create(req, res) {
 }
 
 async function deleteKnife(req, res) {
-  console.log(req.params.id)
   const knife = await Knife.findByIdAndRemove(req.params.id);
   res.json(knife);
 }
+
+// async function deleteSharpening(req, res) {
+//   const knife = await Knife.findById(req.params.id);
+//   const stone = knife.stones.id(req.params.stoneId).remove();
+//   await knife.save();
+//   res.json(knife);
+// }
+
 

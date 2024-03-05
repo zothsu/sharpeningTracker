@@ -15,7 +15,6 @@ export default function KnifeDetails({knives, handleDeleteKnife, handleUpdateKni
 
   function findLastSharpened(k) {
     const stone = k.stones.sort((a,b) => a.createdAt-b.createdAt)
-    console.log(stone[0].createdAt)
     return stone[0].createdAt
   }
 
