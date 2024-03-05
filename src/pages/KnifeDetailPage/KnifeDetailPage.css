@@ -40,4 +40,9 @@ h1 {
 
 aside {
   padding: 1em;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  row-gap: 4em;
+
 }

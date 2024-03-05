@@ -34,7 +34,7 @@ export default function KnifeDetails({knives, handleDeleteKnife, handleUpdateKni
             <tr>
               <th>Name/Series Name</th>
               <th>Steel Type</th>
-              <th>Purchase Date</th>
+              <th>Length</th>
               <th>Last Sharpened</th>
               <th> Delete </th>
             </tr>

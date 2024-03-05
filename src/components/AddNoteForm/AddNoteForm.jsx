@@ -23,7 +23,7 @@ export default function AddKnifeForm({handleAddNote, setAddNoteForm}) {
       <form onSubmit={handleSubmit}>
         <label>Note Type</label>
         <select name="noteType" onChange={handleChange}>
-          <option value="Damage Report">Damage Report</option>
+          <option value="Damage Report">Damage</option>
           <option value="Bevel Angle">Bevel Angle</option>
           <option value="Other">Other</option>
         </select>

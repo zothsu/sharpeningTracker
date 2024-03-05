@@ -48,13 +48,12 @@ export default function KnifeDetailPage() {
               <p className="length">Length: <span>{knife.length}</span></p>
               <p className="purchase">Purchase Date: <span>{formatDate(knife.purchaseDate)}</span></p>
             </div>
-            <hr/>
             <div className="knifeNotes">
               <h2 className="btnInTitle">Notes <button onClick={() => setAddNoteForm(true)}>Add Note</button></h2>
               {addNoteForm && <AddNoteForm handleAddNote={handleAddNote} setAddNoteForm={setAddNoteForm} />}
               { knife.notes.map((n, idx)=> (
                 <div key={idx}>
-                  <p className="notes">{n.noteType}: <span> {n.noteDetails}</span></p>
+                  <p className="notes">{n.noteType}: &nbsp;<span> {n.noteDetails}</span></p>
                 </div>
               ))}
             </div>
@@ -68,6 +67,7 @@ export default function KnifeDetailPage() {
               <tr>
                 <th>Stone Brand</th>
                 <th>Grit</th>
+                <th>Medium</th>
                 <th>Date</th>
               </tr>
               {knife.stones.map((val, key) => {
@@ -75,6 +75,7 @@ export default function KnifeDetailPage() {
                   <tr key={key}>
                     <td>{val.brand}</td>
                     <td>{val.grit}</td>
+                    <td>{val.medium === "Other" ? val.otherMedium : val.medium}</td>
                     <td>{formatDate(val.createdAt)}</td>
                   </tr>
                 )
