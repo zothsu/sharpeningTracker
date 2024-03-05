@@ -1,0 +1,26 @@
+.form-container {
+  margin: 0 auto;
+}
+
+.form-container form {
+  display: flex;
+  flex-direction: column;
+  width: 25em;
+}
+
+.form-container label {
+  margin-bottom: .5em;
+}
+
+.form-container input,
+.form-container textarea {
+  padding: .5em;
+}
+
+.form-container button {
+  padding: .5em 2em;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+}

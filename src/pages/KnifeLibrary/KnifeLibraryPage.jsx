@@ -36,11 +36,11 @@ export default function KnifeLibraryPage() {
 
   return (
     <>
-      <h1>Knife Library</h1>
       {addForm 
         ? <AddKnifeForm knife={false} setAddForm={setAddForm} handleAddKnife={handleAddKnife}/>
         :<div>
-          <button onClick={() => {setAddForm(true) }}>Add Knife</button>
+        <h1>Knife Library &nbsp;
+          <button onClick={() => {setAddForm(true) }}>Add Knife</button></h1>
           <KnifeDetails handleDeleteKnife={handleDeleteKnife} handleUpdateKnife={handleUpdateKnife} knives={knives}/>
         </div>
       }
