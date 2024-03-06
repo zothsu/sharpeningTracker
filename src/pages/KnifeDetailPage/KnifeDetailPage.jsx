@@ -49,7 +49,9 @@ export default function KnifeDetailPage() {
               <p className="purchase">Purchase Date: <span>{formatDate(knife.purchaseDate)}</span></p>
             </div>
             <div className="knifeNotes">
-              <h2 className="btnInTitle">Notes <button onClick={() => setAddNoteForm(true)}>Add Note</button></h2>
+              <h2 className="btnInTitle">Notes &nbsp;
+                <button onClick={() => setAddNoteForm(true)}>Add Note</button>
+              </h2>
               {addNoteForm && <AddNoteForm handleAddNote={handleAddNote} setAddNoteForm={setAddNoteForm} />}
               { knife.notes.map((n, idx)=> (
                 <div key={idx}>
@@ -63,24 +65,26 @@ export default function KnifeDetailPage() {
               <button onClick={() => setAddForm(true)}> Add Sharpening</button>
             </h2>
               {addForm && <AddSharpeningForm handleAddSharpening={handleAddSharpening} setAddForm={setAddForm} />}
-            <table>
-              <tr>
-                <th className="hide-on-small">Stone Brand</th>
-                <th>Grit</th>
-                <th className="hide-on-small">Medium</th>
-                <th>Date</th>
-              </tr>
-              {knife.stones.map((val, key) => {
-                return (
-                  <tr key={key}>
-                    <td className="hide-on-small">{val.brand}</td>
-                    <td>{val.grit}</td>
-                    <td className="hide-on-small">{val.medium === "Other" ? val.otherMedium : val.medium}</td>
-                    <td>{formatDate(val.date)}</td>
-                  </tr>
-                )
-              })}
-            </table>
+            <div className="sharpeingDetailsTable">
+              <table>
+                <tr>
+                  <th className="hide-on-small">Stone Brand</th>
+                  <th>Grit</th>
+                  <th className="hide-on-small">Medium</th>
+                  <th>Date</th>
+                </tr>
+                {knife.stones.map((val, key) => {
+                  return (
+                    <tr key={key}>
+                      <td className="hide-on-small">{val.brand}</td>
+                      <td>{val.grit}</td>
+                      <td className="hide-on-small">{val.medium === "Other" ? val.otherMedium : val.medium}</td>
+                      <td>{formatDate(val.date)}</td>
+                    </tr>
+                  )
+                })}
+              </table>
+            </div>
           </div>
         </div>
       }

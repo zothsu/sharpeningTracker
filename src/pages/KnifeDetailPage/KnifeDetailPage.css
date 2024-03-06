@@ -10,13 +10,15 @@ h2 {
   display: flex;
   justify-content: space-between;
   align-items: center;
-
 }
 .detailcontainer {
   display: flex;
   flex-direction: row;
   width: 100vw;
-  justify-content: space-around;
+  justify-content: space-between;
+  padding-left: 1em;
+  padding-right: 4em;
+  gap: 2em;
 }
 
 .knifeDetails, .knifeNotes {
@@ -47,11 +49,13 @@ aside {
   flex-direction: column;
   justify-content: space-evenly;
   row-gap: 4em;
+  min-width: 18em;
 }
 
 table {
   min-width: 25em;
   margin: 1em;
+  text-align: left;
 }
 
 @media (max-width: 700px) {
@@ -59,13 +63,14 @@ table {
   .detailcontainer {
     flex-direction: column;
   }
-
-  .knifeDetails, .knifeNotes {
-    text-align: left;
-  }
-
   .sharpeingDetails {
     padding: 1em;
+  }
+  .sharpeingDetailsTable {
+    display: flex;
+    justify-content: flex-start;
+    gap: 1em;
+    max-width: 10em;
   }
 
   .hide-on-small {
@@ -73,6 +78,21 @@ table {
   }
 
   table {
-    min-width: 15em;
+    min-width: 10em;
+    text-align: left;
   }
+
+  .name, .length, .steel, .purchaseDate, .brand, .purchase, .notes {
+    margin-bottom: 0;
+    display: flex;
+    justify-content: flex-start;
+    gap: 1em;
+  }
+
+  .btnInTitle {
+    display: flex;
+    justify-content: flex-start;
+    flex-grow: 0;
+  }
+
 }
