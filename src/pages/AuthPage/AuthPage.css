@@ -47,3 +47,9 @@ input:focus {
   display: flex;
   justify-content: center;
 }
+
+.form-container-h2 {
+  font-size: 3rem;
+  text-align: center;
+  margin-bottom: 1.5em;
+} 

@@ -32,7 +32,7 @@ export default function LoginForm({ setUser }) {
 
   return (
     <>
-    <h2>Already have an account?</h2>
+    <h2 className='form-container-h2'>Already have an account?</h2>
     <div className='form-container-parent'>
       <div className="form-container">
         <form autoComplete="off" onSubmit={handleSubmit}>
