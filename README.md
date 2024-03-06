@@ -1,10 +1,13 @@
 # Sharpening Tracker
 
-MERN project to track sharpening knives and other tools.
+ 
 
 ## Screenshots
 
-TBA
+|   Description | Screenshot |
+|:-------------:| -----------|
+| Log in  | <img src="https://i.imgur.com/XWLRBJp.png" width="700"/> |
+| Knife Details | <img src="https://i.imgur.com/2xx4Nio.png" width="700"/> |
 
 ## Technologies Used
 
@@ -17,17 +20,19 @@ TBA
 
 ### Services Used
 
+- Trello
 - [LineIcons](https://lineicons.com/)
 
 ## Getting Started
 
-- Deployed app: [Link to deployed app]
-- Repository: [Link to repository]
-- Trello board: [Link to Trello board]
+- [Deployed app](https://sharpeningtracker-38b3dbb8f407.herokuapp.com/)
+- [Repository](https://github.com/zothsu/sharpeningTracker)
+- [Trello board](https://trello.com/b/i3MBSFst/knife-tracker)
 
 ## Next Steps
 
-- Icebox features
+- AAU I want to post pictures of my Knives
+- AAU I want a reminder to sharpen my knives after three months
 
 ### Bugs
 
