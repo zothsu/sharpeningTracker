@@ -1,13 +1,15 @@
-# Sharpening Tracker
+# [Sharpening Tracker]()
 
+ Helping you keep track of when you last sharpened your knives.
  
+ ..and what you sharpened them with.
 
 ## Screenshots
 
 |   Description | Screenshot |
 |:-------------:| -----------|
-| Log in  | <img src="https://i.imgur.com/XWLRBJp.png" width="700"/> |
-| Knife Details | <img src="https://i.imgur.com/2xx4Nio.png" width="700"/> |
+| Log in  | <img src="https://i.imgur.com/XWLRBJp.png" /> |
+| Knife Details | <img src="https://i.imgur.com/2xx4Nio.png"/> |
 
 ## Technologies Used
 
