@@ -1,0 +1,70 @@
+.knifelibrarypagecontainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    padding: 1em;
+}
+
+.knifelibrarypagecontainer h1 {
+    font-size: 3em;
+    margin-bottom: 20px;
+}
+
+.knifelibrarypagecontainer table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 1em;
+    margin-left: 2em;
+    margin-right: 2em;
+}
+
+.knifelibrarypagecontainer table th {
+    background-color: #8c7ca7;
+    color: white;
+    padding: 1em;
+    text-align: left;
+}
+
+.knifelibrarypagecontainer table td {
+    padding: 1em;
+    border-bottom: 1px solid #8a7aa5;
+}
+
+.knifelibrarypagecontainer table tr:hover a {
+  color: #fff;
+
+}
+
+.knifelibrarypagecontainer table tr:hover {
+    background-color: #cfb7f9;
+    color: white;
+}
+
+.knifelibrarypagecontainer a {
+    color: #cfb7f9;
+    cursor: pointer;
+    font-weight: 900;
+}
+
+.knifelibrarypagecontainer a:hover {
+    color: white;
+}
+
+.knifelibrarypagecontainer .addknifebutton {
+    background-color: #cfb7f9;
+    color: white;
+    padding: 1em;
+    border: none;
+    border-radius: 5px;
+    margin-top: 20px;
+    cursor: pointer;
+}
+
+.knifelibrarypagecontainer .addknifebutton:hover {
+    background-color: white;
+    color: #cfb7f9;
+    border: 1px solid #cfb7f9;
+}
