@@ -1,3 +1,12 @@
+.knifedetailpagecontainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2em;
+  padding: 1em;
+
+}
+
 h1 {
   font-size: 3rem;
 }
@@ -15,7 +24,7 @@ h2 {
   display: flex;
   flex-direction: row;
   width: 100vw;
-  justify-content: space-between;
+  justify-content: center;
   padding-left: 1em;
   padding-right: 4em;
   gap: 2em;
@@ -57,6 +66,7 @@ table {
   margin: 1em;
   text-align: left;
 }
+
 
 @media (max-width: 700px) {
 

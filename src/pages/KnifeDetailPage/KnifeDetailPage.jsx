@@ -35,7 +35,7 @@ export default function KnifeDetailPage() {
   };
 
   return (
-    <>
+    <div className="knifedetailpagecontainer">
       <h1>Knife Detail Page</h1>
       { knife && 
         <div className="detailcontainer">
@@ -88,6 +88,6 @@ export default function KnifeDetailPage() {
           </div>
         </div>
       }
-    </>
+    </div>
   )
 }
