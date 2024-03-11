@@ -1,11 +1,17 @@
 .herocontainertop {
-  height: 70vh;
+  height: 80vh;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+
 }
+
 .hero {
   font-family: "Megrim", system-ui;
   font-size: 4REM;
   text-align: left;
-  padding-left: 1em;
+  padding-top: 2em;;
+  padding-left: 4em;
 }
 .copy {
   max-width: 30em;
@@ -13,5 +19,5 @@
   margin: auto;
   color: #fff;
   padding: 1em;
+  align-self: flex-end;
 }
-
